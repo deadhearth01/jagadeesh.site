@@ -16,11 +16,13 @@
             margin: 0;
         }
         .box {
-            border: 2px solid white;
+            border: 0px solid white;
             padding: 20px;
             display: inline-block;
             margin-right: 10px;
-            animation: fadeIn 2s ease-in;
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in, drawBorder 2s ease-in 0.5s forwards;
         }
         .outside {
             font-family: Arial, sans-serif;
@@ -29,6 +31,9 @@
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+        @keyframes drawBorder {
+            to { border-width: 2px; }
         }
     </style>
 </head>
